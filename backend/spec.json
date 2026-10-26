@@ -1,0 +1,206 @@
+{
+  "brand": {
+    "name": "飞淘",
+    "full": "飞淘二手闲置交易",
+    "tagline": "闲置流转 · 担保放心",
+    "port": 8104
+  },
+  "tables": [
+    {
+      "name": "items",
+      "label": "闲置商品",
+      "fields": [
+        {
+          "name": "title",
+          "label": "闲置名",
+          "type": "text"
+        },
+        {
+          "name": "price",
+          "label": "售价(元)",
+          "type": "number"
+        },
+        {
+          "name": "condition",
+          "label": "成色",
+          "type": "text"
+        },
+        {
+          "name": "category",
+          "label": "分类",
+          "type": "text"
+        },
+        {
+          "name": "desc",
+          "label": "描述",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "iPhone 15 Pro 256G",
+          5499,
+          "95新",
+          "数码",
+          "无磕碰 电池效率92%"
+        ],
+        [
+          "戴森 V8 吸尘器",
+          899,
+          "9成新",
+          "家电",
+          "配件齐全 已清洁消毒"
+        ],
+        [
+          "考研全套教材 2026版",
+          89,
+          "8成新",
+          "图书",
+          "少量笔记 无缺页"
+        ]
+      ]
+    },
+    {
+      "name": "inspect_reports",
+      "label": "验货报告",
+      "fields": [
+        {
+          "name": "item_id",
+          "label": "闲置ID",
+          "type": "int"
+        },
+        {
+          "name": "conclusion",
+          "label": "验货结论",
+          "type": "text"
+        },
+        {
+          "name": "date",
+          "label": "验货日期",
+          "type": "text"
+        },
+        {
+          "name": "agency",
+          "label": "验货方",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          1,
+          "外观A / 功能B+ / 电池B",
+          "2026-10-20",
+          "飞淘验机中心"
+        ],
+        [
+          2,
+          "吸力A / 配件A / 外观B",
+          "2026-10-21",
+          "飞淘验机中心"
+        ]
+      ]
+    },
+    {
+      "name": "trade_orders",
+      "label": "担保交易单",
+      "fields": [
+        {
+          "name": "trade_no",
+          "label": "交易号",
+          "type": "text"
+        },
+        {
+          "name": "item_id",
+          "label": "闲置ID",
+          "type": "int"
+        },
+        {
+          "name": "buyer",
+          "label": "买家",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "label": "担保状态",
+          "type": "text"
+        },
+        {
+          "name": "amount",
+          "label": "托管金额(元)",
+          "type": "number"
+        },
+        {
+          "name": "note",
+          "label": "备注",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "TD20261024001",
+          1,
+          "买家小林",
+          "已托管",
+          5499,
+          "待确认收货"
+        ],
+        [
+          "TD20261024002",
+          2,
+          "买家阿May",
+          "已完成",
+          899,
+          "已放款"
+        ]
+      ]
+    },
+    {
+      "name": "users",
+      "label": "用户",
+      "fields": [
+        {
+          "name": "username",
+          "label": "用户名",
+          "type": "text"
+        },
+        {
+          "name": "password",
+          "label": "密码",
+          "type": "text"
+        },
+        {
+          "name": "role",
+          "label": "角色",
+          "type": "text"
+        }
+      ],
+      "seed": [
+        [
+          "admin",
+          "admin123",
+          "admin"
+        ],
+        [
+          "ops01",
+          "ops123456",
+          "ops"
+        ],
+        [
+          "view01",
+          "view123456",
+          "viewer"
+        ],
+        [
+          "seller01",
+          "admin123",
+          "卖家"
+        ],
+        [
+          "buyer01",
+          "admin123",
+          "买家"
+        ]
+      ]
+    }
+  ]
+}
