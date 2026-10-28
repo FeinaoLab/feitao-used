@@ -1,27 +1,42 @@
-# 飞淘二手闲置交易
+# ♻️ 飞淘二手闲置交易
 
-> 闲置流转 · 担保放心
+> 让闲置流转起来，轻松拍照发布，安全放心交易
 
-零依赖（Python 标准库 + SQLite）的 飞淘，飞系电商系列成员。
+## 📖 项目简介
 
-## 运行
+飞淘二手闲置交易是一个 C2C 闲置物品交易平台，用户只需拍照即可快速发布闲置商品，结合即时聊天、智能定价与交易保障机制，让二手交易变得简单、高效、安全。
+
+## ✨ 核心特性
+
+- 📸 **拍照发布** — 一键拍照、智能裁剪、快速生成商品详情
+- 💬 **即时聊天** — 买卖双方实时沟通，支持图片、语音、位置消息
+- 🤖 **智能定价** — 基于大数据与 AI 的商品参考价与定价建议
+- 🛡️ **交易保障** — 担保交易、资金托管、纠纷仲裁机制
+- 🔍 **智能搜索** — 图片搜索、语义搜索、附近商品推荐
+- 🏷️ **分类体系** — 数码、服饰、家居、图书等多维度分类
+- ⭐ **信用体系** — 用户评价、信用等级、实名认证
+
+## 🚀 快速开始
 
 ```bash
-cd backend
-python server.py
-# 访问 http://127.0.0.1:8104/ ，三角色: admin/admin123 · ops01/ops123456 · view01/view123456
+# 克隆项目
+git clone https://github.com/dukema81/feitao-used.git
+cd feitao-used
+
+# 安装依赖
+npm install
+
+# 启动开发环境
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
 
-## 测试
+## 📄 许可证
 
-```bash
-python -m pytest tests/ -q
-```
+本项目基于 [MIT License](LICENSE) 开源许可协议。
 
-## 目录
+---
 
-- backend/  通用引擎 engine.py + 规格 spec.json + 服务入口 server.py
-- frontend/ 原生 JS SPA（门店 + 统计 + 规格驱动后台）
-- tools/    专属 Logo（icon.svg）+ UI 巡检（ui_check.py，零依赖探活+截图）
-- docs/     建设方案
-- tests/    API 集成测试（真实起服务全链路断言）
+Made with ❤️ by dukema81
